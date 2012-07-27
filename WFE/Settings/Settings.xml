@@ -1,0 +1,12 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+  <ArrayOfSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Settings xsi:type="CodeSettings" ruleSetClasses="false" comments="true" namespace="WFE.ExtractedCode">
+    <ruleDefinition nameFormat="[workflow]_[ruleSet]_[ruleName]" returns="System.Boolean" paramFormat="object model, string expression" />
+    <inheritance>System.Object</inheritance>
+    <references>System</references>
+    <references>System.Collections.Generic</references>
+    <references>System.Linq</references>
+    <modelType>System.Object</modelType>
+  </Settings>
+  <Settings xsi:type="DocumentSettings" />
+</ArrayOfSettings>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <type activityType="System.Workflow.Activities.ListenActivity">
+    <description>The activity '$name' is a group of listners waiting for one, or more events to trigger some actions.  $name has following listners: $dependents</description>
+  </type>
+  <type activityType="System.Workflow.Activities.SequenceActivity">
+    <description>The activity '$name' is a sequence of activities/actions to be performed.  Following activities will be executed in the sequence to mark the completion of $name: $dependents</description>
+  </type>
+  <type activityType="System.Workflow.Activities.WhileActivity">
+    <description>In this activity, a condition is evaluated and if its true, one or more activities are executed</description>
+  </type>
+  <type activityType="System.Workflow.Activities.PolicyActivity">
+    <description>The activity '$name' runs through group of rules to check accordance with a policy</description>
+  </type>
+  <type activityType="System.Workflow.Activities.EventDrivenActivity">
+    <description>The activity '$name' waits for an event to occur.  On occurence of the event, it may execute one or more activities like $dependents</description>
+  </type>
+  <type activityType="System.Workflow.Activities.StateActivity">
+    <description>This activity '$name' defines a new state in the workflow</description>
+  </type>
+  <type activityType="System.Workflow.Activities.StateInitializationActivity">
+    <description>This activity '$name' is first executed when a state is initialized</description>
+  </type>
+  <type activityType="System.Workflow.Activities.IfElseActivity">
+    <description>This activity '$name' defines a logical seperation of activities based on one ore more conditions. If none of the conditions is met, it is likely that no action will be executed.</description>
+  </type>
+  <type activityType="System.Workflow.Activities.IfElseBranchActivity">
+    <description>This activity '$name' may contain one or more activities to be performed.  This is dependent on a condition defined in its parent activity</description>
+  </type>
+  <type activityType="System.Workflow.Activities.SetStateActivity">
+    <description>This activity '$name' sets the next state to $TargetStateName</description>
+  </type>
+</templates>
