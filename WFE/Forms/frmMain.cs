@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Workflow.Activities.Rules.Design;
 using System.Workflow.Activities.Rules;
 using WFE.Models.Output;
+using System.Workflow.ComponentModel.Serialization;
 
 namespace WFE.Forms
 {
@@ -295,9 +296,19 @@ namespace WFE.Forms
                     }
                 }
             }
-            catch
+            catch (WorkflowMarkupSerializationException workflowException)
             {
-
+                UpdateError(this, new MessageEventArgs(String.Format("There is error in retrieving XOML at Line: {0} Position: {1}.",
+                                                        workflowException.LineNumber,
+                                                        workflowException.LinePosition), Base.EventType.Error));
+                UpdateOutput(this, new MessageEventArgs("[ERROR]: Recommended fix- Copy the rules and edit XOML based on error and retry with new rules file",
+                                                        Base.EventType.Error));
+                UpdateOutput(this, new MessageEventArgs("Generation Failed!", Base.EventType.Error));
+            }
+            catch (Exception ex)
+            {
+                UpdateError(this, new MessageEventArgs(ex.Message, Base.EventType.Error));
+                UpdateOutput(this, new MessageEventArgs("Generation Failed!", Base.EventType.Error));
             }
         }
 
