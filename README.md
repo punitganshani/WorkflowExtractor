@@ -16,3 +16,5 @@ Some of the features of WFE are:
 Apart from generating word document, you can also write your own Output Generators and hook them using Dependency Injection and IoC patterns in the code.
 
 It is developed in C# and Windows Workflow APIs to extract rules.
+
+This project was earlier managed on [CodePlex] (http://workflowextractor.codeplex.com) and has been recently moved to GitHub
