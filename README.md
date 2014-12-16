@@ -1,6 +1,8 @@
 WorkflowExtractor
 =================
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ip60i6uj3yv51hl7?svg=true)](https://ci.appveyor.com/project/punitganshani/workflowextractor)
+
 WFE **extracts rules** from Windows Workflow rules files or assemblies and converts the rules into C# and VB.NET class files.  It can also generate Word documents using another Open-Source library **DocX**
 
 Some of the features of WFE are:
